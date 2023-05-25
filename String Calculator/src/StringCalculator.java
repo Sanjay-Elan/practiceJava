@@ -4,12 +4,14 @@ public class StringCalculator {
 
     public static int Add ( String numbers ) {
 
+        numbers = numbers.replaceAll(",,|\\\\n",",0,");
+
         String[] digits = numbers.split(",");
 
         int result = 0;
 
-        for (int j=0; j<digits.length; j++) {
-            if (digits[j].isEmpty()) {
+        for ( int j = 0; j < digits.length; j++ ) {
+            if ( digits[j].isEmpty() ) {
                 digits[j] = "0";
             }
         }
