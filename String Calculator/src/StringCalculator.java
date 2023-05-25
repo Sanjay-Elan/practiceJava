@@ -9,6 +9,7 @@ public class StringCalculator {
         String[] digits = numbers.split(",");
 
         int result = 0;
+        int flag = 0;
 
         for (int j=0; j<digits.length; j++) {
 
@@ -24,9 +25,10 @@ public class StringCalculator {
 
             if ( Integer.parseInt(digits[i]) < 0 ) {
 
-                throw new IllegalArgumentException();
+                flag += 1;
 
             }
+
             else {
 
                 result += Integer.parseInt(digits[i]);
@@ -34,8 +36,19 @@ public class StringCalculator {
             }
         }
 
-        System.out.println("The Sum of two value is: "+result);
-        return 0;
+        if ( flag > 1 ) {
+
+            System.out.println("Two or multiple array values contains negative value, the current array value is "+numbers);
+            throw new IllegalArgumentException();
+
+        }
+        else if ( flag == 1){
+
+            throw new IllegalArgumentException("negatives not allowed in the array");
+
+        }
+
+        return result;
 
     }
     public static void main(String args[]) throws IOException {
@@ -45,6 +58,8 @@ public class StringCalculator {
         System.out.println("Enter a valid number separated by comma(,)");
         String value = br.readLine();
 
-        Add(value);
+        int result = Add(value);
+
+        System.out.println("Total Sum of the given input is: "+result);
     }
 }
