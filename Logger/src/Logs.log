@@ -1,0 +1,14 @@
+Jun 06, 2023 6:45:02 PM LoggerSample init
+INFO: Logger Init
+Jun 06, 2023 6:45:02 PM LoggerSample main
+WARNING: Exception :
+java.lang.ArithmeticException: / by zero
+	at LoggerSample.main(LoggerSample.java:30)
+
+Jun 06, 2023 6:45:41 PM LoggerSample init
+INFO: Logger Init
+Jun 06, 2023 6:45:41 PM LoggerSample main
+WARNING: Exception :
+java.lang.ArithmeticException: / by zero
+	at LoggerSample.main(LoggerSample.java:30)
+

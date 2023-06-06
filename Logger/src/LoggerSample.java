@@ -11,13 +11,13 @@ public class LoggerSample {
         FileHandler fh;
 
         try {
-            fh = new FileHandler("C:/Work/Docs/Logs.log",true);
-
+//            fh = new FileHandler("C:/Work/Docs/Logs.log",true);
+              fh = new FileHandler(System.getProperty("user.dir")+System.getProperty("file.separator")+"Logs.log",true);
             logger.addHandler(fh);
             SimpleFormatter sf = new SimpleFormatter();
             fh.setFormatter(sf);
 
-//            logger.info("Logger Init");
+            logger.info("Logger Init");
 
         } catch (Exception e) {
             logger.log(Level.WARNING,"Exception :", e);
@@ -27,7 +27,7 @@ public class LoggerSample {
     public static void main(String args[]) {
         init();
         try {
-            int a = 5/1;
+            int a = 10/0;
         } catch (Exception e) {
             logger.log(Level.WARNING,"Exception :", e);
         }
