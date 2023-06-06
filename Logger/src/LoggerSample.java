@@ -11,7 +11,7 @@ public class LoggerSample {
         FileHandler fh;
 
         try {
-            fh = new FileHandler("C:/Work/Docs/Logs.log");
+            fh = new FileHandler("C:/Work/Docs/Logs.log",true);
 
             logger.addHandler(fh);
             SimpleFormatter sf = new SimpleFormatter();
