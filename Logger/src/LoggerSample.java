@@ -7,7 +7,7 @@ import java.util.logging.FileHandler;
 public class LoggerSample {
     private static Logger logger = Logger.getLogger("Logs");
 
-    public static void init() {
+    static {
         FileHandler fh;
 
         try {
@@ -25,7 +25,7 @@ public class LoggerSample {
     }
 
     public static void main(String args[]) {
-        init();
+//        init();  // called only if line 10 looks like this "public static void init()"
         try {
             int a = 10/0;
         } catch (Exception e) {

@@ -12,3 +12,10 @@ WARNING: Exception :
 java.lang.ArithmeticException: / by zero
 	at LoggerSample.main(LoggerSample.java:30)
 
+Jun 06, 2023 6:54:21 PM LoggerSample <clinit>
+INFO: Logger Init
+Jun 06, 2023 6:54:21 PM LoggerSample main
+WARNING: Exception :
+java.lang.ArithmeticException: / by zero
+	at LoggerSample.main(LoggerSample.java:30)
+
